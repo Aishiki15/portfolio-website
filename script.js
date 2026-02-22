@@ -376,6 +376,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show page loader
     showPageLoader();
     
+    // Initialize interactive features
+    initParticleSystem();
+    initCursorTrail();
+    initTiltEffect();
+    
+    // Initialize interactive features
+    initParticleSystem();
+    initCursorTrail();
+    initTiltEffect();
+    
     // Initialize floating shapes
     initFloatingShapes();
     
@@ -500,6 +510,16 @@ document.querySelector('.logo-text').addEventListener('click', function() {
     clickCount++;
     if (clickCount >= 5) {
         this.style.animation = 'rainbow 2s infinite';
+        
+        // Activate glitch effect on name
+        const nameElement = document.getElementById('typing-name');
+        if (nameElement) {
+            nameElement.classList.add('glitch');
+            setTimeout(() => {
+                nameElement.classList.remove('glitch');
+            }, 3000);
+        }
+        
         setTimeout(() => {
             this.style.animation = '';
             clickCount = 0;
@@ -523,3 +543,270 @@ const rainbowStyles = `
 `;
 
 document.head.insertAdjacentHTML('beforeend', rainbowStyles);
+
+// === PARTICLE SYSTEM ===
+function initParticleSystem() {
+    const particlesContainer = document.querySelector('.particles-container');
+    const particleCount = 50;
+    
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random starting position
+        const startX = Math.random() * window.innerWidth;
+        const drift = (Math.random() - 0.5) * 200;
+        
+        particle.style.left = startX + 'px';
+        particle.style.setProperty('--drift', drift + 'px');
+        
+        // Random size and opacity
+        const size = Math.random() * 3 + 1;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.opacity = Math.random() * 0.5 + 0.3;
+        
+        // Random animation duration
+        const duration = Math.random() * 3 + 5;
+        particle.style.animationDuration = duration + 's';
+        
+        particlesContainer.appendChild(particle);
+        
+        // Remove particle after animation
+        setTimeout(() => {
+            if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+            }
+        }, duration * 1000);
+    }
+    
+    // Create initial particles
+    for (let i = 0; i < particleCount; i++) {
+        setTimeout(createParticle, i * 100);
+    }
+    
+    // Continuously create new particles
+    setInterval(createParticle, 200);
+}
+
+// === CURSOR TRAIL ===
+function initCursorTrail() {
+    const trail = document.querySelector('.cursor-trail');
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    
+    function animateTrail() {
+        trailX += (mouseX - trailX) * 0.1;
+        trailY += (mouseY - trailY) * 0.1;
+        
+        trail.style.left = trailX + 'px';
+        trail.style.top = trailY + 'px';
+        
+        requestAnimationFrame(animateTrail);
+    }
+    
+    animateTrail();
+    
+    // Hide trail on mobile
+    if (window.innerWidth <= 768) {
+        trail.style.display = 'none';
+    }
+}
+
+// === TILT EFFECT ===
+function initTiltEffect() {
+    const tiltElements = document.querySelectorAll('.tilt-card');
+    
+    tiltElements.forEach(element => {
+        element.addEventListener('mousemove', handleTilt);
+        element.addEventListener('mouseleave', resetTilt);
+    });
+    
+    function handleTilt(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / centerY * -10;
+        const rotateY = (x - centerX) / centerX * 10;
+        
+        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
+    }
+    
+    function resetTilt() {
+        this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    }
+}
+
+// === PARTICLE SYSTEM ===
+function initParticleSystem() {
+    const particlesContainer = document.querySelector('.particles-container');
+    const particleCount = 50;
+    
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random starting position
+        const startX = Math.random() * window.innerWidth;
+        const drift = (Math.random() - 0.5) * 200;
+        
+        particle.style.left = startX + 'px';
+        particle.style.setProperty('--drift', drift + 'px');
+        
+        // Random size and opacity
+        const size = Math.random() * 3 + 1;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.opacity = Math.random() * 0.5 + 0.3;
+        
+        // Random animation duration
+        const duration = Math.random() * 3 + 5;
+        particle.style.animationDuration = duration + 's';
+        
+        particlesContainer.appendChild(particle);
+        
+        // Remove particle after animation
+        setTimeout(() => {
+            if (particle.parentNode) {
+                particle.parentNode.removeChild(particle);
+            }
+        }, duration * 1000);
+    }
+    
+    // Create initial particles
+    for (let i = 0; i < particleCount; i++) {
+        setTimeout(createParticle, i * 100);
+    }
+    
+    // Continuously create new particles
+    setInterval(createParticle, 200);
+}
+
+// === CURSOR TRAIL ===
+function initCursorTrail() {
+    const trail = document.querySelector('.cursor-trail');
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    
+    function animateTrail() {
+        trailX += (mouseX - trailX) * 0.1;
+        trailY += (mouseY - trailY) * 0.1;
+        
+        trail.style.left = trailX + 'px';
+        trail.style.top = trailY + 'px';
+        
+        requestAnimationFrame(animateTrail);
+    }
+    
+    animateTrail();
+    
+    // Hide trail on mobile
+    if (window.innerWidth <= 768) {
+        trail.style.display = 'none';
+    }
+}
+
+// === TILT EFFECT ===
+function initTiltEffect() {
+    const tiltElements = document.querySelectorAll('.tilt-card');
+    
+    tiltElements.forEach(element => {
+        element.addEventListener('mousemove', handleTilt);
+        element.addEventListener('mouseleave', resetTilt);
+    });
+    
+    function handleTilt(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / centerY * -10;
+        const rotateY = (x - centerX) / centerX * 10;
+        
+        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
+    }
+    
+    function resetTilt() {
+        this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    }
+}
+
+// === ENHANCED TYPING EFFECT ===
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    const cursor = document.querySelector('.typing-cursor');
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        } else {
+            // Hide cursor after typing is complete
+            setTimeout(() => {
+                if (cursor) cursor.style.display = 'none';
+            }, 2000);
+        }
+    }
+    
+    type();
+}
+
+// === ENHANCED SCROLL ANIMATIONS ===
+function observeElements() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                
+                // Trigger specific animations based on element
+                if (entry.target.classList.contains('skills-section')) {
+                    animateSkillBars();
+                }
+                
+                // Add stagger effect to project cards
+                if (entry.target.classList.contains('project-card')) {
+                    const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 100;
+                    entry.target.style.animationDelay = delay + 'ms';
+                }
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe all sections and cards
+    const elementsToAnimate = document.querySelectorAll(`
+        .about-card,
+        .skills-section,
+        .experience-item,
+        .achievement-card,
+        .project-card,
+        .contact-card,
+        .form
+    `);
+    
+    elementsToAnimate.forEach(element => {
+        element.classList.add('animate-on-scroll');
+        observer.observe(element);
+    });
+}
