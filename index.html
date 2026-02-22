@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aishiki Bhattacharya | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AB</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="gradient-text" id="typing-name">Aishiki Bhattacharya</span></h1>
+                <h2 class="role-text">Software Development Engineer II</h2>
+                <p class="hero-description">
+                    Computer Science Engineer specializing in Graphics Research, Machine Learning, 
+                    and Full-Stack Development with a passion for creating innovative solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="card-glow"></div>
+                    <div class="profile-info">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <h3>Aishiki Bhattacharya</h3>
+                        <p>SDE II @ Newgen Software</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/aishiki-bhattacharya-779772229" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Aishiki15" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:aishiki21007@iiitd.ac.in">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-subtitle">Passionate about technology and innovation</div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>Background</h3>
+                        <p>
+                            Recent Computer Science graduate from IIIT Delhi with a strong foundation in 
+                            graphics research, machine learning, and software development. Currently working 
+                            as SDE II at Newgen Software, bringing innovative solutions to complex problems.
+                        </p>
+                        
+                        <h3>Expertise</h3>
+                        <p>
+                            Specialized in computer graphics, real-time rendering, machine learning models, 
+                            and full-stack development. Experienced in research-driven projects and 
+                            collaborative software development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Expert Level</h4>
+                            <div class="skills-list">
+                                <div class="skill-item" data-level="95">
+                                    <span>Python</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="90">
+                                    <span>Java</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="88">
+                                    <span>C++</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="85">
+                                    <span>SQL</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Tools & Technologies</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">Unreal Engine</span>
+                                <span class="tech-tag">OptiX</span>
+                                <span class="tech-tag">LibGDX</span>
+                                <span class="tech-tag">Blender</span>
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education-section">
+                <h3>Education</h3>
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Bachelor of Technology - Computer Science Engineering</h4>
+                            <p class="institution">Indraprastha Institute of Information Technology Delhi</p>
+                            <p class="duration">Jan 2021 - 2025 | CGPA: 8.46</p>
+                            <p class="courses">Computer Vision, Computer Graphics, Machine Learning, Data Structures & Algorithms</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Class 12 (AISSCE)</h4>
+                            <p class="institution">Delhi Public School, R. K. Puram</p>
+                            <p class="duration">2021 | Percentage: 96%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-subtitle">Professional journey and achievements</div>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-marker current"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Software Development Engineer II</h3>
+                            <span class="company">Newgen Software</span>
+                            <span class="duration">2025 - Present</span>
+                        </div>
+                        <p>Currently working as SDE II, contributing to innovative software solutions and development projects.</p>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Graphics Research Intern</h3>
+                            <span class="company">TCS Research & Innovation</span>
+                            <span class="duration">May 2023 - Nov 2023</span>
+                        </div>
+                        <p>Completed a 4-month Research Internship Program in the Graphics Research Group Lab, 
+                           working on optimizing photo-realistic real-time rendering with global illumination.</p>
+                        <div class="tech-used">
+                            <span>C++</span>
+                            <span>OptiX</span>
+                            <span>Unreal Engine</span>
+                            <span>OpenGL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements">
+                <h3>Honors & Awards</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>Google Women Engineers Scholar</h4>
+                        <p>Top 1% scholar selected from 27,000+ applicants for the prestigious Women Engineers Program by TalentSprint & Google</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h4>Published Researcher</h4>
+                        <p>Published "Jail Diaries" in Springer's Studies in Computational Intelligence series, recognized at ACM IndiaHCI 2023</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>KVPY Qualified</h4>
+                        <p>Qualified the Kishore Vaigyanik Protsahan Yojana Examination by IISc, demonstrating excellence in scientific aptitude</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-subtitle">Innovative solutions and research work</div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Mitsuba</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Differentiable Rendering for 3D Reconstruction</h3>
+                        <p class="project-type">Research Project</p>
+                        <p>Advanced research on differentiable programming and rendering pipelines for 3D reconstruction of refractive objects using gradient-based optimization techniques.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Unreal Engine</span>
+                            <span>OptiX</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Real-time Rendering System</h3>
+                        <p>Interactive system for photo-realistic real-time rendering with dynamic light placement and exploration of rendering tools.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>CNNs</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SR-GAN/VAE Image Enhancement</h3>
+                        <p>Advanced image super-resolution using GAN and VAE models with conditional sampling and deep feature loss functions.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>OCR</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>MedBot53</h3>
+                        <p>RAG-powered chatbot using OCR to interpret handwritten medical prescriptions with secure drug database integration.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>MySQL</span>
+                            <span>HTML</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>A2Z Online Retail Store</h3>
+                        <p>Complete e-commerce backend solution with comprehensive management for customers, sellers, and delivery operations.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>LibGDX</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tank Stars Game</h3>
+                        <p>Desktop replication of the popular Tank Stars arcade game with strategic turn-based combat mechanics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-subtitle">Let's create something amazing together</div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>aishiki21007@iiitd.ac.in</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91-9810544978</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/aishiki-bhattacharya-779772229</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p>github.com/Aishiki15</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form class="form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Aishiki Bhattacharya. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/aishiki-bhattacharya-779772229" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Aishiki15" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:aishiki21007@iiitd.ac.in">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
